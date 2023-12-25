@@ -10,6 +10,10 @@ SAT Results Manager is a backend service that provides REST APIs for managing st
 - **Framework:** Spring Boot
 - **Database:** MySQL
 
+## Deployed link
+-App: https://sat-result-record-mannger.vercel.app/
+- API Doc:https://sat-y49v.onrender.com/swagger-ui/index.html
+
 ## Controller API Summary
 
 ### SATResultController
