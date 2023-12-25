@@ -1,0 +1,16 @@
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\controller\SATResultController.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\SatStudentDetailsManagerApplication.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\services\Imp\DefaultSATResultServices.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\dtos\ResponseDto.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\services\ISATResultsServices.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\dtos\SATResultsDto.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\config\CorsResponseFilter.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\config\CorsConfig.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\exception\GlobalExceptionHandler.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\models\SATResults.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\exception\RecordAlreadyExistException.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\mapper\SATResultsMapper.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\exception\ResourceNotFoundException.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\dtos\ErrorResponseDto.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\audit\AuditAwareImp.java
+D:\Precize_Assignement\SATStudentDetailsMannger\src\main\java\com\Arjunagi\SATStudentDetailsMannger\repository\ISATResultsRepo.java
