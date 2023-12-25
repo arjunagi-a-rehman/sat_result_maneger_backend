@@ -10,10 +10,14 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +29,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping(path = "/api",produces = MediaType.APPLICATION_JSON_VALUE)
+@Validated
 public class SATResultController {
     ISATResultsServices satResultsServices;
 
@@ -48,7 +53,7 @@ public class SATResultController {
             }
     )
     @PostMapping("/student/result")
-    public ResponseEntity<ResponseDto> createStudentResultRecord(@RequestBody SATResultsDto satResultsDto){
+    public ResponseEntity<ResponseDto> createStudentResultRecord(@Valid @RequestBody SATResultsDto satResultsDto){
         satResultsServices.createStudentResultRecord(satResultsDto);
         return new ResponseEntity<>(new ResponseDto("201","The data inserted successfully"), HttpStatus.CREATED);
     }
@@ -122,7 +127,7 @@ public class SATResultController {
     }
     )
     @PatchMapping("/student/score/{name}")
-    public ResponseEntity<ResponseDto> updateScore(@PathVariable String name,@RequestParam Integer score){
+    public ResponseEntity<ResponseDto> updateScore(@PathVariable @NotEmpty String name,@RequestParam @Min(0) Integer score){
         Boolean isUpdated=satResultsServices.updateScore(name, Float.valueOf(score));
         if(isUpdated){
             return new ResponseEntity<>(new ResponseDto("200","marks updated"),HttpStatus.NO_CONTENT);
@@ -154,7 +159,7 @@ public class SATResultController {
     }
     )
     @DeleteMapping("/result/student")
-    public ResponseEntity<ResponseDto> deleteRecord(@RequestParam String name){
+    public ResponseEntity<ResponseDto> deleteRecord(@RequestParam @NotEmpty String name){
         Boolean isDeleted=satResultsServices.deleteRecord(name);
         if (isDeleted){
             return new ResponseEntity<>(new ResponseDto("200","deleted successful"),HttpStatus.OK);
