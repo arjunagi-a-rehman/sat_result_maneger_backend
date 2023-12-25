@@ -143,7 +143,71 @@ Swagger UI is provided for API documentation. The documentation includes details
 
 Feel free to explore the code and documentation for more details. If you have any questions or need further clarification, please don't hesitate to reach out.
 
-Thank you for considering my submission.
+## Getting Started
 
-Best regards,
-[Your Full Name]
+To deploy the SAT Results Manager application, follow the steps below. This guide assumes that you have Java, Maven, and MySQL installed on your machine.
+
+## Prerequisites
+
+1. **Java:** Ensure that you have Java installed. You can download it from [Oracle's official website](https://www.oracle.com/java/technologies/javase-downloads.html) or use a package manager like [SDKMAN](https://sdkman.io/) or [Homebrew](https://brew.sh/) for macOS.
+
+2. **Maven:** Make sure you have Maven installed. You can download it from the [official Apache Maven website](https://maven.apache.org/download.cgi) or use a package manager.
+
+3. **MySQL:** Set up a MySQL database. You can download and install MySQL from the [official MySQL website](https://dev.mysql.com/downloads/installer/) or use a Docker container for local development.
+
+## Deployment Steps
+
+### Backend (Spring Boot)
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/arjunagi-a-rehman/sat_result_maneger_backend.git
+   ```
+
+2. **Configure Database:**
+   - Open `application.properties` in the `src/main/resources` folder.
+   - Modify the `spring.datasource.url`, `spring.datasource.username`, and `spring.datasource.password` properties to match your MySQL database configuration.
+
+3. **Build the Application:**
+   ```bash
+   cd sat_result_maneger_backend
+   mvn clean install
+   ```
+
+4. **Run the Application:**
+   ```bash
+   java -jar target/SATResultManager-0.0.1-SNAPSHOT.jar
+   ```
+   The backend application will start on `http://localhost:8080`.
+
+5. **Swagger API Documentation:**
+   Access the Swagger UI at [http://localhost:8080/swagger-ui/index.html#](http://localhost:8080/swagger-ui/index.html#) to explore and test the APIs.
+
+### Frontend (React)
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/arjunagi-a-rehman/SAT_record_Mannger.git
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   cd SAT_record_Mannger
+   npm install
+   ```
+
+3. **Configure Backend Endpoint:**
+   - Open `src/services/api.js`.
+   - Update the `BASE_URL` variable to point to your backend URL, e.g., `http://localhost:8080/api`.
+
+4. **Run the Application:**
+   ```bash
+   npm start
+   ```
+   The frontend application will start on `http://localhost:3000`.
+
+5. **Access the Application:**
+   Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to access the SAT Results Manager application.
+
+Now, you have successfully deployed and run the SAT Results Manager application. Feel free to use the provided APIs and explore the functionality. If you encounter any issues or have questions, please refer to the README files in each repository for more information.
+
+Happy coding!
