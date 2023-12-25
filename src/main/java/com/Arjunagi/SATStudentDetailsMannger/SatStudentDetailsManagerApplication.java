@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("*")
 @EnableJpaAuditing(auditorAwareRef = "AuditAwareImp")
 @OpenAPIDefinition(
 		info = @Info(
