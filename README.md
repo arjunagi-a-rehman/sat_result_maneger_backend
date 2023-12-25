@@ -208,6 +208,4 @@ To deploy the SAT Results Manager application, follow the steps below. This guid
 5. **Access the Application:**
    Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to access the SAT Results Manager application.
 
-Now, you have successfully deployed and run the SAT Results Manager application. Feel free to use the provided APIs and explore the functionality. If you encounter any issues or have questions, please refer to the README files in each repository for more information.
-
-Happy coding!
+Now, you have successfully deployed and run the SAT Results Manager application. Feel free to use the provided APIs and explore the functionality. If you encounter any issues or have questions, please reachout to me
